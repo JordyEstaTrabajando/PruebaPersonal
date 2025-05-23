@@ -1,0 +1,406 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Carlito",sans-serif;
+}
+
+/*------GENERAL DE TODO--------*/
+/*Header INICIO*/
+.box-header{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.box-header-icon{
+    height: 90%;
+    margin: 5px 0px;
+}
+
+.box-header-icon img{
+    height: 80%;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+}
+
+.box-header-nav{
+    flex: 7;
+    height: 100%;
+    justify-items: center;
+}
+
+.box-header-nav ol{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    height: 90%;
+}
+
+.box-header-nav li{
+    align-content: center;
+    text-align: center;
+    flex: 1;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
+.box-header-login, .box-header-icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-header-login button{
+    border: 0px;
+    font-weight: bold;
+    border-radius: 3px;    
+    padding: 10px 30px;
+    font-size: 15px;
+}
+/*Header FIN*/
+
+/*------------------MAIN INICIO------------------*/
+/*----------- GENERAL MAIN -----------*/
+main{
+    position: relative;
+}
+
+.main-box2,.main-box3{
+    background-color: rgba(39, 39, 39, 0.85);
+}
+
+.main-background{
+    position: relative;
+}
+
+.main-background::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../multimedia/repeat.webp);
+    z-index: -1;
+    animation: ShinyBox 1s infinite ease;
+}
+/*----------- BOX1 -----------*/
+.main-box1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.main-box1-img{
+    flex: 0 0 150px;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.main-box1-img img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.main-box1-txt{
+    background-image: url(../multimedia/commingsoon.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-box1-txt-content{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+}
+
+.main-box1-txt-content h2{
+    flex: 3;
+    font-size: 35px;
+    width: 100%;
+    align-content: center;
+}
+
+.main-box1-txt-content p{
+    flex: 7;
+    font-size: 20px;
+    text-align: justify;
+    align-content: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+/*----------- FIN BOX1 -----------*/
+
+/*----------- BOX2 -----------*/
+.main-box2{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: white;
+}
+
+.main-box2 p{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.main-box2-topsale {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.main-box2-topsale-item{
+    flex: 0 0 320px;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: rgb(58, 40, 57);
+    display: flex;
+    flex-direction: column
+}
+
+.main-box2-topsale-item-txt{
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-box2-topsale-item-img img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius:  15px;
+}
+
+.main-box2-topsale-item h2{
+    text-align: center;
+    font-size: 25px;
+    flex: 3;
+    align-content: center;
+}
+
+.main-box2-topsale-item p   {
+    font-size: 15px;
+    text-align: justify;
+    padding: 5px 25px;
+    flex: 7;
+}
+
+/*----------- FIN BOX2 -----------*/
+.main-box3{
+    width: auto;
+    height: auto;
+    padding: 25px;
+}
+
+.main-box3-p{
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.main-box3-geners{
+    border-radius: 10px;
+    background-image: url(/multimedia/commingsoon.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-box3-geners-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-box3-geners-item{
+    display: flex;
+    flex-direction: row;
+    width: 230px;
+    height: 120px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.main-box3-geners-item img{
+    flex: 4;
+    display: flex;
+    width: 100%;
+    border-right: 2px solid rgb(104, 104, 104) ;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.main-box3-geners-item p{
+    flex: 6;
+    background-color: rgb(15, 15, 15,0.75);
+    width: 100%;
+    color: white;
+
+    text-align: center;
+    align-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*-------------------- MAIN FIN --------------------*/
+
+/*-------------------- FOOTER --------------------*/
+
+footer{
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+/*----------- BOX1 -----------*/
+.footer-box1{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.footer-box1-img{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.footer-box1-img img{
+    justify-items: center;
+    overflow: hidden;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+.footer-box1-content{
+    flex: 7;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+.footer-hr{
+    display: none;
+}
+
+/*----------- BOX2 -----------*/
+.footer-box2{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-box2-txt{
+    margin: 15px 0px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.footer-box2-icons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.footer-box2-icons img{
+    flex: 1;
+    margin: 15px 10px;
+    align-items: center;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-box2-copy{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+hr{
+    margin: 25px 0px;
+    width: 85%;
+    
+}
+
+/*ANIMACIONES Y MEDIA QUERYS :D*/
+
+@keyframes ShinyBox {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@media (width <= 720px) {
+    footer{
+        flex-direction: column;
+    }
+
+    .footer-hr{
+        display: block;
+        align-self: center;
+    }
+
+    .main-box1{
+        flex-direction: column;
+    }
+
+    .main-box3-geners-item{
+        flex-direction: column;
+        width: 120px;
+        height: 200px;
+    }
+
+    .main-box3-geners-item img{
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .main-box3-geners-item p{
+        border-radius: 0px 0px 10px 10px;
+    }
+}
