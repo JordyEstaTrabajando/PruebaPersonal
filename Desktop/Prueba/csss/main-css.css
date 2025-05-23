@@ -5,6 +5,7 @@
     font-family: "Carlito",sans-serif;
 }
 
+/*------GENERAL DE TODO--------*/
 /*Header INICIO*/
 .box-header{
     display: flex;
@@ -66,24 +67,32 @@ nav{
 /*Header FIN*/
 
 /*------------------MAIN INICIO------------------*/
-/*----------- GENERAL -----------*/
-main::before {
-    content: "";
-    position: absolute; /* Absolute sirve para que su posición se base en la caja padre ewe*/
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(../multimedia/repeat.webp);
-    z-index: -1; /*Esta cosa sirve para mandar una capa atras c:*/
-    animation: ShinyBox 2s linear infinite;
-}
-
+/*----------- GENERAL MAIN -----------*/
 main{
-    max-width: 100%;
-    object-fit: contain;
+    position: relative;
 }
 
+.main-box2,.main-box3{
+    background-color: rgba(39, 39, 39, 0.85);
+}
+
+.main-background{
+    position: relative;
+}
+
+.main-background::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../multimedia/repeat.webp);
+    z-index: -1;
+    animation: ShinyBox 1s infinite ease;
+}
 /*----------- BOX1 -----------*/
 .main-box1 {
     display: flex;
@@ -91,26 +100,24 @@ main{
     width: 100%;
 }
 
-.main-box1-img, .main-box1-txt{
-    padding: 15px;
-}
-
 .main-box1-img{
+    flex: 0 0 150px;
     background-color: rgb(34, 34, 34);
     display: flex;
     justify-content: center;
-    align-items: center; /* CENTRA verticalmente */
+    align-items: center;
+    padding: 15px;
 }
 
 .main-box1-img img {
     max-width: 100%;
-    max-height: 100%;
     object-fit: cover;
 }
 
 .main-box1-txt{
-    background-color: rgba(0, 0, 0, 0.7);
-    position: relative;
+    background-image: url(../multimedia/commingsoon.webp);
+    background-position: center;
+    background-size: cover;
 }
 
 .main-box1-txt-content{
@@ -119,6 +126,8 @@ main{
     color: white;
     display: flex;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
 }
 
 .main-box1-txt-content h2{
@@ -134,20 +143,7 @@ main{
     text-align: justify;
     align-content: center;
     width: 100%;
-}
-
-.main-box1-txt::before{ /*Pesudo-Elemento para hacer el fondo del box1 a la decrecha*/
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(../multimedia/commingsoon.webp);
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
-    color: white;
+    font-weight: bold;
 }
 
 /*----------- FIN BOX1 -----------*/
@@ -159,7 +155,6 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(66, 54, 70, 0.85);
     padding: 40px;
     color: white;
 }
@@ -186,7 +181,6 @@ main{
     flex: 0 0 320px;
     border-radius: 15px;
     margin: 10px;
-    aspect-ratio: 1/2;
     background-color: rgb(58, 40, 57);
     display: flex;
     flex-direction: column
@@ -220,13 +214,74 @@ main{
 }
 
 /*----------- FIN BOX2 -----------*/
-
 .main-box3{
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 25px;
 }
-/*--------------------MAIN FIN--------------------*/
+
+.main-box3-p{
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.main-box3-geners{
+    border-radius: 10px;
+    background-image: url(/multimedia/commingsoon.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-box3-geners-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.main-box3-geners-item{
+    display: flex;
+    flex-direction: row;
+    width: 230px;
+    height: 120px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.main-box3-geners-item img{
+    flex: 4;
+    display: flex;
+    width: 100%;
+    border-right: 2px solid rgb(104, 104, 104) ;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.main-box3-geners-item p{
+    flex: 6;
+    background-color: rgb(15, 15, 15,0.75);
+    width: 100%;
+    color: white;
+
+    text-align: center;
+    align-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*-------------------- MAIN FIN --------------------*/
+
+/*-------------------- FOOTER --------------------*/
 
 footer{
     display: flex;
@@ -235,10 +290,42 @@ footer{
     background-color: rgb(0, 0, 0);
 }
 
+/*----------- BOX1 -----------*/
 .footer-box1{
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
 }
 
+.footer-box1-img{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.footer-box1-img img{
+    justify-items: center;
+    overflow: hidden;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+.footer-box1-content{
+    flex: 7;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+.footer-hr{
+    display: none;
+}
+
+/*----------- BOX2 -----------*/
 .footer-box2{
     flex: 5;
     display: flex;
@@ -275,7 +362,10 @@ footer{
 hr{
     margin: 25px 0px;
     width: 85%;
+    
 }
+
+/*ANIMACIONES Y MEDIA QUERYS :D*/
 
 @keyframes ShinyBox {
     0% {
@@ -286,12 +376,31 @@ hr{
     }
 }
 
-@media (max-width: 720px) {
+@media (width <= 720px) {
     footer{
         flex-direction: column;
     }
 
+    .footer-hr{
+        display: block;
+        align-self: center;
+    }
+
     .main-box1{
         flex-direction: column;
+    }
+
+    .main-box3-geners-item{
+        flex-direction: column;
+        width: 120px;
+        height: 200px;
+    }
+
+    .main-box3-geners-item img{
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .main-box3-geners-item p{
+        border-radius: 0px 0px 10px 10px;
     }
 }
