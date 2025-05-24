@@ -13,25 +13,32 @@
 <body>
     <!------------------ HEADER ------------------>
     <header>
-        <div class="box-header">
-            <div class="box-header-icon">
-                <img src="multimedia/icon-logow.png" alt="icon">
-            </div>
-            <div class="box-header-nav">
-                <nav>
-                    <ol>
-                        <li>Juegos</li>
-                        <li>Soporte</li>
-                        <li>Tiendas</li>
-                        <li>Nosotros</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="box-header-login">
-                <button>Ingresar</button>
-            </div>
+        <div class="header-box">
+            <nav>
+                <div class="nav-content">
+                    <div class="nav-content-boxbtn">
+                        <button class="nav-content-btn" id="nav-content-btn">☰</button>
+                    </div>
+                    <div class="nav-content-logo">
+                        <img src="multimedia/icon-logow-notxt.png" alt="">
+                    </div>
+                    <div class="nav-content-menu" id="nav-content-menu">
+                        <ul>
+                            <li class="nav-content-menu-item"><a href="#">Juegos</a></li>
+                            <li class="nav-content-menu-item"><a href="#">Soporte</a></li>
+                            <li class="nav-content-menu-item"><a href="#">Tiendas</a></li>
+                            <li class="nav-content-menu-item"><a href="#">Nosotros</a></li>
+                        </ul>
+                        <div class="nav-content-login">
+                            <button class="nav-content-login-btn">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
+    <!------------------ FIN MAIN ------------------>
+
     <!------------------ MAIN ------------------>
     <main>
         <div class="main-background">
@@ -43,7 +50,7 @@
             <div class="main-box1-txt">
                 <div class="main-box1-txt-content">
                     <h2>Anno - 117: Pax Romana (Proximamente)</h2>
-                    <p class="texto">Ubicado en el año 117 d.C., durante la cúspide del Imperio Romano bajo el emperador Trajano, el juego nos sitúa en la era de la Pax Romana, un período de relativa paz y estabilidad que permitió una expansión cultural y económica sin precedentes</p>
+                    <p class="texto">Ubicado en el año 117 d.C., durante la cúspide del Imperio Romano bajo el emperador Trajano, el juego nos sitúa en la era de la Pax Romana, un período de relativa paz y estabilidad que permitió una expansión cultural y económica sin precedentes.</p>
                 </div>
             </div>
         </div>
@@ -117,7 +124,7 @@
                     <img src="multimedia/genre1.jpg" alt="poto1">
                     <div class="main-box3-geners-item-txt">
                         <p class="main-box3-geners-item-txt-genre">Acción</p>
-                        <p class="main-box3-geners-item-txt-desc">Ten grandes aventuras</p>
+                        <p class="main-box3-geners-item-txt-desc">Sé un heroe y ten grandes aventuras</p>
                     </div>
                 </div>
                 <!--Item-->
@@ -235,5 +242,6 @@
             </p>
         </div>
     </footer>
+    <script src="js/main-js.js"></script>
 </body>
 </html>

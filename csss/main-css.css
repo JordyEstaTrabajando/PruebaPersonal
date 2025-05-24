@@ -5,66 +5,88 @@
     list-style: none;
     font-family: "Carlito",sans-serif;
     color: white;
-    
+    text-decoration: none;
 }
 
 /*------GENERAL DE TODO--------*/
-/*Header INICIO*/
-.box-header{
-    display: flex;
-    flex-direction: row;
-    height: 80px;
+
+/*------------------HEADER INICIO------------------*/
+.header-box{
     background-color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
-.box-header-icon{
-    padding: 5px;
-}
-
-.box-header-icon img{
-    height: 80%;
-}
-
-nav{
-    width: 100%;
-    height: 100%;
-}
-
-.box-header-nav{
-    flex: 7;
-    justify-items: center;
-}
-
-.box-header-nav ol{
+.nav-content{
     display: flex;
     flex-direction: row;
-    height: 90%;
+    position: relative;
 }
 
-.box-header-nav li{
-    align-content: center;
-    text-align: center;
+.nav-content-logo{
     flex: 1;
-    font-weight: bold;
-    margin: 5px 0px;
+    padding: 10px;
 }
 
-.box-header-login, .box-header-icon{
+.nav-content-logo img{
+    max-width: 60px;
+}
+
+.nav-content-btn{
+    display: none;
+}
+
+.nav-content-menu{
+    flex: 9;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-content-menu ul{
+    flex: 8;
+    height: 100%;
+
+    display: flex;
+    gap: 15px;
+}
+
+.nav-content-menu-item{
     flex: 1;
+    height: 100%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.box-header-login button{
-    border: 0px;
-    font-weight: bold;
-    border-radius: 3px;    
-    padding: 10px 30px;
-    font-size: 15px;
-    color: black;
+.nav-content-menu-item a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.3rem;
+    height: 60%;
+    width: 60%;
 }
-/*Header FIN*/
+
+.nav-content-login{
+    flex: 2 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-content-login button{
+    width: 60%;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*------------------HEADER FIN------------------*/
 
 /*------------------MAIN INICIO------------------*/
 /*----------- GENERAL MAIN -----------*/
@@ -173,10 +195,10 @@ nav{
     flex: 0 0 300px;
     border-radius: 15px;
     margin: 10px;
-    background-color: rgb(40, 30, 30,0.65);
+    background-color: rgb(40, 30, 30,0.7);
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 2px rgba(60, 10, 10, 0.85),
+    box-shadow: 2px 2px rgba(50, 5, 5, 0.85),
                 4px 4px rgba(10, 10, 10, 0.85);
 }
 
@@ -295,7 +317,7 @@ nav{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     
 }
 
@@ -467,12 +489,69 @@ hr{
 }
 
 @media (width <= 768px) {
+    /*-------------- HEADER --------------*/
+    .nav-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-content-logo{
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        padding: 0px;
+    }   
+
+    .nav-content-logo img{
+        max-height: 55px;
+    }
+
+    .nav-content-btn {
+        display: flex;
+        font-size: 2.2rem;
+        margin: 10px;
+        background: none;
+        border: none;
+    }
+
+    .nav-content-menu{
+        display: none;
+        background-color: rgb(10, 10, 10);
+        transition: max-height 0.5s ease-in-out;
+
+    }
+
+    .nav-content-menu ul {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-content-menu-item{
+        height: 50px;
+        padding: 5px 0px;
+    }
+
+    .nav-content-menu-item a {
+        width: 100%;
+        
+    }
+
+    .nav-content-login{
+        margin: 10px 0px;
+        width: 100%;
+        
+    }
+    
+    /*-------------- MAIN --------------*/
+
     .main-box1{
         flex-direction: column;
     }
     
     .main-box3-geners-item{
-        width: 180px;
+        width: 150px;
         height: 200px;
     }
 
