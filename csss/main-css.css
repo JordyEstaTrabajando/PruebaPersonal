@@ -9,9 +9,6 @@
     user-select: none;
 }
 
-/*------GENERAL DE TODO--------*/
-
-
 /*------------------MAIN INICIO------------------*/
 /*----------- GENERAL MAIN -----------*/
 .main-box2,.main-box3,.main-box4{
@@ -33,6 +30,7 @@
     height: 100%;
     z-index: -1;
     background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     animation: background-transition 18s infinite ease;
 }
@@ -301,91 +299,7 @@
 /*-------------------- MAIN FIN --------------------*/
 
 
-/*-------------------- FOOTER --------------------*/
 
-footer{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(0, 0, 0);
-}
-
-/*----------- BOX1 -----------*/
-.footer-box1{
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-}
-
-.footer-box1-img{
-    flex: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-}
-
-.footer-box1-img img{
-    justify-items: center;
-    overflow: hidden;
-    max-width: 120px;
-    object-fit: contain;
-}
-
-.footer-box1-content{
-    flex: 7;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    align-content: center;
-}
-
-.footer-hr{
-    display: none;
-}
-
-/*----------- BOX2 -----------*/
-.footer-box2{
-    flex: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-box2-txt{
-    margin: 15px 0px;
-    font-size: 25px;
-    text-align: center;
-}
-
-.footer-box2-icons {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-box2-icons a{
-    display: flex;
-    justify-content: center;
-}
-
-.footer-box2-icons a img{
-    margin: 15px 10px;
-    height: 50px;
-    object-fit: contain;
-}
-
-.footer-box2-copy{
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-hr{
-    margin: 25px 0px;
-    width: 85%;
-}
 
 /*MEDIA QUERYS :D*/
 
@@ -417,63 +331,7 @@ hr{
 }
 
 @media (width <= 768px) {
-    /*-------------- HEADER --------------*/
-    .nav-content {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nav-content-logo{
-        position: absolute;
-        top: 5px;
-        right: 15px;
-        padding: 0px;
-    }   
-
-    .nav-content-logo img{
-        max-height: 55px;
-    }
-
-    .nav-content-btn {
-        display: flex;
-        font-size: 2.2rem;
-        margin: 10px;
-        background: none;
-        border: none;
-    }
-
-    .nav-content-menu{
-        display: none;
-        background-color: rgb(10, 10, 10);
-        transition: max-height 0.5s ease-in-out;
-
-    }
-
-    .nav-content-menu ul {
-        display: flex;
-        flex-direction: column; 
-        width: 100%;
-        gap: 0;
-    }
-
-    .nav-content-menu-item{
-        height: 50px;
-        padding: 5px 0px;
-    }
-
-    .nav-content-menu-item a {
-        width: 100%;
-        
-    }
-
-    .nav-content-login{
-        margin: 10px 0px;
-        width: 100%;
-        
-    }
-    
     /*-------------- MAIN --------------*/
-
     .main-box1{
         flex-direction: column;
     }
@@ -481,14 +339,5 @@ hr{
     .main-box3-geners-item{
         width: 150px;
         height: 200px;
-    }
-
-    footer{
-        flex-direction: column;
-    }
-
-    .footer-hr{
-        display: block;
-        align-self: center;
     }
 }

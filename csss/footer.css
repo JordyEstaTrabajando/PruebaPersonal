@@ -1,0 +1,97 @@
+/*-------------------- FOOTER --------------------*/
+
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0);
+}
+
+/*----------- BOX1 -----------*/
+.footer-box1{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.footer-box1-img{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.footer-box1-img img{
+    justify-items: center;
+    overflow: hidden;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+.footer-box1-content{
+    flex: 7;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+.footer-hr{
+    display: none;
+}
+
+/*----------- BOX2 -----------*/
+.footer-box2{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-box2-txt{
+    margin: 15px 0px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.footer-box2-icons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-box2-icons a{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-box2-icons a img{
+    margin: 15px 10px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-box2-copy{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+hr{
+    margin: 25px 0px;
+    width: 85%;
+}
+
+@media (width <= 768px) {
+    /*-------------- MAIN --------------*/
+    footer{
+        flex-direction: column;
+    }
+
+    .footer-hr{
+        display: block;
+        align-self: center;
+    }
+}

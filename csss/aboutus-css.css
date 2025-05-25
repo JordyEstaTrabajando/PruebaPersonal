@@ -8,3 +8,131 @@
     text-decoration: none;
     user-select: none;
 }
+
+.aboutus-main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(20, 20,20);
+    background-image: url(../multimedia/aboutus-background.png);
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.aboutus-main-title{
+    text-align: center;
+    text-shadow: 
+                3px 3px 3px rgb(0, 0, 0),
+                2px 2px 3px rgb(255, 255, 255);
+    font-size: 2.4rem;
+    align-content: center;
+}
+
+.aboutus-main-txt{
+    text-align: justify;
+}
+
+/*------------------------- BOX1 -------------------------*/
+.aboutus-main-box1{
+    height: 280px;
+    object-fit: contain;
+    overflow: hidden;
+    background-image: url(../multimedia/aboutus-banner.jpg);
+    background-position: top;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutus-main-box1-txt1, .aboutus-main-box1-txt2{
+    text-align: center;
+    text-shadow: 
+                2px 2px 3px rgb(0, 0, 0),
+                -2px -2px 3px rgb(0, 0, 0),
+                -2px 2px 3px rgb(0, 0, 0),
+                2px -2px 3px rgb(0, 0, 0);
+    margin: 0px 25px;
+}
+
+.aboutus-main-box1-txt1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.aboutus-main-box1-txt2{
+    font-size: 25px;
+}
+
+/*------------------------- BOX2 -------------------------*/
+.aboutus-main-box2{
+    margin: 15px 65px;
+    display: flex;
+    flex-direction: row;
+    margin: 35px 75px;
+    gap: 35px;
+
+    justify-content: center;
+}
+
+.aboutus-main-box2-content{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+
+    background-color: rgb(79, 80, 80);
+    border-radius: 15px;
+}
+
+.aboutus-main-box2-content:hover{
+    animation: Temblar 2s infinite ease;
+    border: 2px solid white;
+}
+
+.aboutus-main-box2-content p{
+    flex: 1;
+}
+
+.aboutus-main-box2-img{
+    flex: 4;
+}
+
+.aboutus-main-box2-img img{
+    overflow: hidden;
+    object-fit: cover;
+    max-width: 85%;
+}
+
+@keyframes Temblar {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (width<=768px) {
+    .aboutus-main-box2{
+        flex-direction: column;
+        margin: 25px ;
+    }
+
+    .aboutus-main-box2 img{
+        display: none;
+    }
+
+    iframe{
+        width: 100%;
+    }
+}
